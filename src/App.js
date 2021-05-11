@@ -5,6 +5,7 @@ import{Navbar} from './Components/Navbar';
 import Header from './Components/Header';
 import Particle from './Components/Particle';
 import Loader from 'react-spinners/RiseLoader';
+import About from './Components/About';
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
   setLoading(true);
   setTimeout(() => {
     setLoading(false);
-  }, 4000);
+  }, 1500);
  },[]);
 
   return (
@@ -30,6 +31,7 @@ function App() {
       <Particle />
       <Navbar />
       <Header />
+      <About />
       </>
       } 
     </div>
