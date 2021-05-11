@@ -6,6 +6,7 @@ import Header from './Components/Header';
 import Particle from './Components/Particle';
 import Loader from 'react-spinners/RiseLoader';
 import About from './Components/About';
+import Services from './Components/Services';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
       <Navbar />
       <Header />
       <About />
+      <Services />
       </>
       } 
     </div>
