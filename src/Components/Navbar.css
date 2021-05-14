@@ -5,6 +5,10 @@
   nav{
     z-index: 2;
   }
+  .navbar-trans {
+    background: transparent; 
+  }
+  
   .nav a.nav-link{
     /* font-weight: 500; */
     letter-spacing: .0375rem;
