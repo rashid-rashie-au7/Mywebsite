@@ -20,6 +20,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    border-top-right-radius: 15px;
 }
 .box h3{
     font-family: 'Poiret One';
@@ -28,19 +29,73 @@
 .box:hover{
     background: orange;
     border-bottom: 0.3125rem solid black;
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+      0 24px 46px rgba(255, 215, 97, 0.48);
+    transform: translateY(-5px) scale(1.005) translateZ(0);
 }
+.box:active {
+    transform: scale(1) translateZ(0);
+    box-shadow: 0 15px 24px rgba(0,0,0,0.11),
+      0 15px 24px rgba(255, 215, 97, 0.48);
+  }
 
 .box:hover .service-icon{
     color: black;
 }
 .box:hover .circle{
     background: #fff;
+    border-color: #ffeeba;
 }
+.box:hover .circle:after {
+    background: #ffeeba;
+  }
 .box:hover h3{
     color: #fff;
 }
 .box:hover p{
     color: #fff;
+}
+.circle {
+    position:relative;
+    margin: 0.375rem;
+    background: orange;
+    border-radius: 50%;
+    width:3.5rem;
+    height: 3.5rem;
+    z-index: 1;
+    transition: all 0.7s ease-out;
+}
+  .circle:after {
+    width: 118px;
+    height: 118px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: 7px;
+    left: 7px;
+    transition: opacity 0.7s ease-out;
+  }
+
+  .circle FontAwesomeIcon{
+    z-index: 10000;
+    transform: translateZ(0);
+  }
+
+
+
+
+.tech-container{
+    text-align: center;
+}
+.tech-container col{
+    padding: 0;
+}
+.tech-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 
@@ -52,11 +107,8 @@
     left: 50%;
     transform:translate(-50%,-50%);
 }
- .circle {
-    position:relative;
-    margin: 0.375rem;
-    background: orange;
-    border-radius: 50%;
-    width:3.5rem;
-    height: 3.5rem;
-}
+
+
+
+
+/* ////////////////////////////// TechNology ///////////////////////// */

@@ -6,7 +6,6 @@
 
 /*********************** Header*****************/
 .loader{
- 
  background-color: #36D7B7;
  display: flex;
  flex-direction: column;
@@ -19,4 +18,11 @@
  bottom: 0;
  width:100%;
  height: 100vh;
+}
+
+.loader .Header{
+  font-family: 'Poiret One';
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 50px;
 }

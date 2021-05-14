@@ -7,7 +7,8 @@ import Particle from './Components/Particle';
 import Loader from 'react-spinners/RiseLoader';
 import About from './Components/About';
 import Services from './Components/Services';
-
+import logo from './assets/Mylogo.png' 
+import Experience from './Components/Experience';
 function App() {
 
  const [loading, setLoading] = useState(false);
@@ -24,8 +25,10 @@ function App() {
       { 
       loading ? 
       <div className='loader'>
-        <div className="Header">Abdul Rashid A</div>
-      <Loader size={20} color={'#fff'} loading={loading} />
+        <img src={logo} alt="" />
+        <div className="Header" >Abdul Rashid A
+        </div>
+        <Loader size={15} color={'#fff'} loading={loading} />
       </div>
         :
       <>
@@ -34,6 +37,7 @@ function App() {
       <Header />
       <About />
       <Services />
+      <Experience />
       </>
       } 
     </div>
