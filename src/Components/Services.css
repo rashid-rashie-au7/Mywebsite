@@ -21,6 +21,7 @@
     align-items: center;
     text-align: center;
     border-top-right-radius: 15px;
+    transition: 0.3s ease-in-out;
 }
 .box h3{
     font-family: 'Poiret One';

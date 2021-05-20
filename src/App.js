@@ -9,6 +9,7 @@ import About from './Components/About';
 import Services from './Components/Services';
 import logo from './assets/Mylogo.png' 
 import Experience from './Components/Experience';
+import Portfolio from './Components/Portfolio';
 function App() {
 
  const [loading, setLoading] = useState(false);
@@ -38,6 +39,7 @@ function App() {
       <About />
       <Services />
       <Experience />
+      <Portfolio />
       </>
       } 
     </div>
