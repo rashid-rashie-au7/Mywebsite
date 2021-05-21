@@ -1,16 +1,22 @@
 import React, {useState} from 'react'
 import emailjs from 'emailjs-com'
 import {useForm} from 'react-hook-form'
+import Lottie from "react-lottie";
+import animData from "../assets/emailSent.json";
 import './Contact.css'
 
 const Contact = () => {
-    const [succesMsg,setSuccesMsg] = useState("");
+    const [succesMsg,setSuccesMsg] = useState(false);
     const { register, handleSubmit,formState:{errors} } = useForm();
     const ServiceID ="service_xz0jl12";
     const templeteID = "template_cr1aqwv";
     const userID = "user_b3AfDBmqCKSx2xEP3a4cL";
     
-
+    const defaultOptions ={
+        loop: false,
+        autoplay:true,
+        animationData: animData
+    }
     const onSubmit = (data,rslt) =>{
         sendEmail(
         ServiceID,
@@ -30,7 +36,7 @@ const Contact = () => {
     const sendEmail = (ServiceID, templeteID, variables,userID) => {
         emailjs.send(ServiceID, templeteID, variables,userID)
           .then(() => {
-              setSuccesMsg("Form sent sucssfully I'll contact ASAP");
+              setSuccesMsg(true);
           }).catch(err => console.log.error(`Something went wrong ${err}`));
       }
 
@@ -40,9 +46,18 @@ const Contact = () => {
             <div className="text-center ">
                 <h1>Contact Me</h1>
                 <p>Please fill the below form to reach out me!</p>
-                <span className="success-msg">
-                    {succesMsg}
-                </span>
+                <>
+                  { 
+                  succesMsg ?
+                  <>
+                  <Lottie
+                  options={defaultOptions}
+                  height={100}
+                  width={100}
+                  isStopped={succesMsg}
+                  />
+                  <span className="success-msg">MSG Sent sucessfully!</span> </> : <span></span>}  
+                </>
             </div>
             <div className="container">
                 <form onSubmit={handleSubmit(onSubmit)}>
