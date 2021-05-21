@@ -1,7 +1,7 @@
 import React , {useState,useEffect} from 'react'
 import './App.css';
 import  'bootstrap/dist/css/bootstrap.min.css'
-import{Navbar} from './Components/Navbar';
+import {Navbar} from './Components/Navbar';
 import Header from './Components/Header';
 import Particle from './Components/Particle';
 import Loader from 'react-spinners/RiseLoader';
@@ -10,6 +10,7 @@ import Services from './Components/Services';
 import logo from './assets/Mylogo.png' 
 import Experience from './Components/Experience';
 import Portfolio from './Components/Portfolio';
+import Contact from './Components/Contact';
 function App() {
 
  const [loading, setLoading] = useState(false);
@@ -40,6 +41,7 @@ function App() {
       <Services />
       <Experience />
       <Portfolio />
+      <Contact />
       </>
       } 
     </div>
